@@ -50,7 +50,7 @@ $(function() {
 
 //ページトップへ
 $(function() {
-	var topBtn = $('#pageTop');	
+	var topBtn = $('#pageTop');
 	//スクロールしてトップ
     topBtn.click(function () {
 		$('body,html').animate({
@@ -58,7 +58,7 @@ $(function() {
 		}, 500);
 		return false;
     });
-});	
+});
 
 /*--- smoothscroll ---*/
 $(function(){
@@ -76,7 +76,7 @@ $(function(){
 	    var href= $(this).attr("href");
 	    var target = $(href);
 	    var position = target.offset().top - headerHeight;
-	    $('body,html').stop().animate({scrollTop:position}, 500);   
+	    $('body,html').stop().animate({scrollTop:position}, 500);
 	});
 });
 
@@ -88,7 +88,7 @@ var x = 769;
 		var w = $(window).width();
 		if (w < x) {
 		$(this).toggleClass("active");
-		
+
 		if($("#spMenu").hasClass("active")){
 			$("#header_nav").fadeIn('normal');
 			$('html').addClass('scroll-prevent');
@@ -117,9 +117,17 @@ var x = 769;
 			 var dw = $(window).width();
 			 if (dw >= x) {
 				 $("#header_nav").css('display','');
-			 } 
+			 }
 			}, 100);
 	});
 
+});
+
+$(function(){
+const button = document.getElementById('button');
+button.addEventListener('click', function() {
+	const captcha = document.getElementById('captcha');
+	captcha.src = './securimage/securimage_show.php?' + Math.random();
+}, false);
 });
 
