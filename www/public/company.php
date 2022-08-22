@@ -31,7 +31,7 @@ if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST
                                                     class="c-form__icn--require">必須</span></div></th>
                                     <td class="c-tbl__data">
                                         <div class="c-form-textarea">
-                                        '.$_POST['toiawase'].'
+                                        '.nl2br($_POST['toiawase']).'
                                         </div>
                                     </td>
                                 </tr>
@@ -42,7 +42,7 @@ if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST
         $mail_button = '<div class="c-btn-list r-center01 r-1line u-mt-m">
                     <input type="hidden" name="type" value="confirm">
                     <input type="hidden" name="title" value="'.$_POST['title'].'">
-                    <input type="hidden" name="toiawase" value="'.$_POST['toiawase'].'">
+                    <input type="hidden" name="toiawase" value="'.nl2br($_POST['toiawase']).'">
                     <p style="color: red; text-align: center; padding-top: 15px; font-size: 13px">※上記の内容で問題ない場合、送信ボタンを押してください</p>
                     <div class="c-btn-list__itm" style="">
                         <input type="submit" class="c-btn-list__itm__link r-emphasis" value="送信">
@@ -75,7 +75,7 @@ if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST
                                     <td class="c-tbl__data">
                                         <div class="c-form-textarea">
                                         <textarea name="toiawase"
-                                                  placeholder="お問い合わせの内容をご入力ください。">'.$_POST['toiawase'].'</textarea>
+                                                  placeholder="お問い合わせの内容をご入力ください。">'.nl2br($_POST['toiawase']).'</textarea>
                                         </div>
                                     </td>
                                 </tr>
@@ -131,7 +131,7 @@ if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST
                                     <td class="c-tbl__data">
                                         <div class="c-form-textarea">
                                         <textarea name="toiawase"
-                                                  placeholder="お問い合わせの内容をご入力ください。">'.$_POST['toiawase'].'</textarea>
+                                                  placeholder="お問い合わせの内容をご入力ください。">'.nl2br($_POST['toiawase']).'</textarea>
                                         </div>
                                     </td>
                                 </tr>
@@ -190,7 +190,7 @@ if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST
                                     <td class="c-tbl__data">
                                         <div class="c-form-textarea">
                                         <textarea name="toiawase" placeholder="お問い合わせの内容をご入力ください。"'.$style_toiawase.' required
-                                            >'.$_POST['toiawase'].'</textarea>
+                                            >'.nl2br($_POST['toiawase']).'</textarea>
                                         </div>
                                     </td>
                                 </tr>
@@ -225,6 +225,8 @@ if ($_POST['type'] == 'confirm'){
 
     $to = 'mikuni@execute.jp';
     $subject = 'お問い合わせ内容';
+
+    $_POST['toiawase'] = str_replace('<br />', '',$_POST['toiawase']);
     $message = $_POST['toiawase'];
     $headers = 'From: ' . $_POST['title'];
 
