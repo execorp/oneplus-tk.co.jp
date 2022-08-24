@@ -486,8 +486,6 @@ if ($_POST['type'] == 'confirm'){
                 <dd>　</dd>
                 <dt class="flex">LINE</dt>
                 <dd>　</dd>
-                <dt class="flex">運営サイト</dt>
-                <dd><a href="">https://</a></dd>
             </dl>
         </div>
     </section>
