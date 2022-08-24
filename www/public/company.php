@@ -482,10 +482,12 @@ if ($_POST['type'] == 'confirm'){
                 <dd>03-5817-4204</dd>
                 <dt class="flex">事業内容</dt>
                 <dd>国際貿易、不動産、旅行業</dd>
-                <dt class="flex">定休日</dt>
-                <dd>　</dd>
-                <dt class="flex">LINE</dt>
-                <dd>　</dd>
+<!--                <dt class="flex">定休日</dt>-->
+<!--                <dd>　</dd>-->
+<!--                <dt class="flex">LINE</dt>-->
+<!--                <dd>　</dd>-->
+<!--                <dt class="flex">運営サイト</dt>-->
+<!--                <dd><a href="">https://</a></dd>-->
             </dl>
         </div>
     </section>
