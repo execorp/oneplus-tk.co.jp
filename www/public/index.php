@@ -9,8 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<!--  SEO  -->
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="ワンプラス,OnePlus,トーキョー,ワンプラス東京,国際貿易,不動産,旅行業,物流倉庫,東京都足立区梅島1-32-6">
+	<meta name="description" content="ワンプラス,OnePlus,トーキョー,ワンプラス東京,国際貿易,不動産,旅行業,物流倉庫,東京都足立区梅島1-32-6">
 	<title>One Plus</title>
 	<!-- favicon -->
 	<link rel="icon" href="/favicon.ico">
@@ -45,9 +45,9 @@
 			<nav id="header_nav">
 				<ul class="flex">
 					<li><a href="./index.html" class="">HOME</a></li>
-					<li><a href="./company.php#profile">会社案内</a></li>
-					<li><a href="./company.php#about">取扱製品一覧</a></li>
-					<li><a href="./company.php#mail" class="trig-colorbox_iframe">お問い合わせ</a></li>
+					<li><a href="./company.html#profile">会社案内</a></li>
+					<li><a href="./company.html#about">取扱製品一覧</a></li>
+					<li><a href="./company.html#mail" class="trig-colorbox_iframe">お問い合わせ</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -89,7 +89,7 @@
 							<li>物流倉庫</li>
 							<li>産業廃棄物処理</li>
 						</ul>
-						<p class="more_btn"><a href="./company.php#trade">MORE</a></p>
+						<p class="more_btn"><a href="./company.html#trade">MORE</a></p>
 					</div>
 
 					<div class="top_service_contents flex">
@@ -101,7 +101,7 @@
 							<li>不動産仲介</li>
 							<li>不動産管理</li>
 						</ul>
-						<p class="more_btn"><a href="./company.php#estate">MORE</a></p>
+						<p class="more_btn"><a href="./company.html#estate">MORE</a></p>
 					</div>
 
 					<div class="top_service_contents flex">
@@ -112,7 +112,7 @@
 							<li>観光情報の提供</li>
 							<li>ホテル経営</li>
 						</ul>
-						<p class="more_btn"><a href="./company.php#travel">MORE</a></p>
+						<p class="more_btn"><a href="./company.html#travel">MORE</a></p>
 					</div>
 				</div>
 			</div>
@@ -130,7 +130,7 @@
 						<a href="tel:03-5817-4203"><span>TEL:</span>03-5817-4203</a>
 					</div>
 					<div class="mail_btn">
-						<a href="./company.php#mail">メールフォームからお問い合わせ</a>
+						<a href="./company.html#mail">メールフォームからお問い合わせ</a>
 					</div>
 				</div>
 			</div>
@@ -160,9 +160,9 @@
 		<nav id="footer_nav">
 			<ul class="flex">
 				<li><a href="./index.html">HOME</a></li>
-				<li><a href="./company.php#profile">会社案内</a></li>
-				<li><a href="./company.php#about">取扱製品一覧</a></li>
-				<li><a href="./company.php#mail">お問い合わせ</a></li>
+				<li><a href="./company.html#profile">会社案内</a></li>
+				<li><a href="./company.html#about">取扱製品一覧</a></li>
+				<li><a href="./company.html#mail">お問い合わせ</a></li>
 				<li><a href="./privacy.html">プライバシーポリシー</a></li>
 			</ul>
 		</nav>

@@ -251,8 +251,8 @@ if ($_POST['type'] == 'confirm'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <!--  SEO  -->
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="ワンプラス,OnePlus,トーキョー,ワンプラス東京,国際貿易,不動産,旅行業,物流倉庫,東京都足立区梅島1-32-6">
+    <meta name="description" content="ワンプラス,OnePlus,トーキョー,ワンプラス東京,国際貿易,不動産,旅行業,物流倉庫,東京都足立区梅島1-32-6">
     <title>One Plus</title>
     <!-- favicon -->
     <link rel="icon" href="/favicon.ico">
