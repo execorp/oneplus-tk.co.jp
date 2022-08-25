@@ -104,7 +104,7 @@ var x = 769;
 			$("#header_nav").fadeOut('normal');
 			$("#spMenu").removeClass("active");
 			$('html').removeClass('scroll-prevent');
-			};
+			}
 		});
 
 	var timer = false;
