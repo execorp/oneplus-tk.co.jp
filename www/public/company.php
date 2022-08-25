@@ -1,9 +1,14 @@
 <?php
+
 require_once './securimage/securimage.php';
 require_once './keyword.php';
+
+//画像認証用
 $securimage = new Securimage();
-$captcha_code = '';
-$style_mail = '';
+
+//お問い合わせ内容（メールアドレス）
+$to = 'jponeplus@gmail.com';
+$subject = 'お問い合わせ内容';
 
 if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST['toiawase'])) {
     $check = $securimage->check($_POST['captcha_code']);
@@ -105,7 +110,6 @@ if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST
                 </div>';
     }
     if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $_POST['title'])) {
-        $captcha_code = '';
         $mail_html = '<div class="c-sec__lyt">
                         <div class="c-tbl r-type01 r-secondary is-fixed r-type-form">
                             <table>
@@ -146,7 +150,6 @@ if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST
                                         </p>
                                         <p><input type="text" name="captcha_code" class="captcha_code"
                                                   placeholder="表示されている文字を入力してください"></p>
-                                        <p style="color: red">'.$captcha_code.'</p>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -223,9 +226,6 @@ if ($_POST['type'] == 'confirm'){
     $mail_html = '<div class="c-sec__lyt"><div class="c-tbl r-type01 r-secondary is-fixed r-type-form" style="text-align: center; font-size: 25px;">メール送信完了</div></div>';
     $mail_button = '';
 
-    $to = 'jponeplus@gmail.com';
-    $subject = 'お問い合わせ内容';
-
     $_POST['toiawase'] = str_replace('<br />', '',$_POST['toiawase']);
     $message = $_POST['toiawase'];
     $headers = 'From: ' . $_POST['title'];
@@ -295,7 +295,7 @@ if ($_POST['type'] == 'confirm'){
 	</header>
 
 <main>
-    <section id="about"<?php echo $style_mail ?>>
+    <section id="about">
         <div class="section_inner">
             <img src="img/cover_companyPC.png" alt="会社説明" class="pc_only">
             <img src="img/cover_companySP.png" alt="会社説明" class="sp_only">
@@ -304,7 +304,7 @@ if ($_POST['type'] == 'confirm'){
         </div>
     </section>
 
-    <section id="trade" class="service_contents"<?php echo $style_mail ?>>
+    <section id="trade" class="service_contents">
         <div class="section_inner">
             <img src="img/trade.png" alt="国際貿易">
             <h3>国際貿易</h3>
@@ -352,7 +352,7 @@ if ($_POST['type'] == 'confirm'){
         </div>
     </section>
 
-    <section id="estate" class="service_contents"<?php echo $style_mail ?>>
+    <section id="estate" class="service_contents">
         <div class="section_inner">
             <img src="img/estate.png" alt="不動産">
             <h3>不動産</h3>
@@ -404,7 +404,7 @@ if ($_POST['type'] == 'confirm'){
         </div>
     </section>
 
-    <section id="travel" class="service_contents"<?php echo $style_mail ?>>
+    <section id="travel" class="service_contents">
         <div class="section_inner">
             <img src="img/travel.png" alt="旅行業">
             <h3>旅行業</h3>
@@ -464,7 +464,7 @@ if ($_POST['type'] == 'confirm'){
         </div>
     </section>
 
-    <section id="profile"<?php echo $style_mail ?>>
+    <section id="profile">
         <div class="section_inner">
             <h2>会社概要</h2>
             <dl class="flex">
@@ -506,7 +506,7 @@ if ($_POST['type'] == 'confirm'){
         </div>
     </section>
 
-    <section id="access"<?php echo $style_mail ?>>
+    <section id="access">
         <div class="section_inner">
             <div class="info flex">
                 <img src="img/logo.png" width="200" height="80" class="pc_only">
@@ -536,7 +536,7 @@ if ($_POST['type'] == 'confirm'){
         </ul>
     </nav>
     <p id="copyright">Copyright(C) <a href="#">株式会社 ワンプラス</a> All Rights Reserved.</p>
-    <p id="pageTop"<?php echo $style_mail ?>><i class="fa-solid fa-chevron-up"></i></p>
+    <p id="pageTop"><i class="fa-solid fa-chevron-up"></i></p>
 </footer>
 </body>
 </html>
