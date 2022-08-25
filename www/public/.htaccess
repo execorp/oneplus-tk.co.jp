@@ -1,0 +1,5 @@
+RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://oneplus-tk.co.jp/$1 [R=301,L]
+RewriteRule (.*)\.html$ $1.php [L]
