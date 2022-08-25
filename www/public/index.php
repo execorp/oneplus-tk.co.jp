@@ -1,5 +1,6 @@
 <?php
-    require_once './keyword.php';
+
+require_once './keyword.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
