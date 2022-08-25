@@ -1,9 +1,9 @@
 <?php
 require_once './securimage/securimage.php';
+require_once './keyword.php';
 $securimage = new Securimage();
 $captcha_code = '';
 $style_mail = '';
-
 
 if (!empty($_POST['captcha_code']) AND !empty($_POST['title']) AND !empty($_POST['toiawase'])) {
     $check = $securimage->check($_POST['captcha_code']);
@@ -223,7 +223,7 @@ if ($_POST['type'] == 'confirm'){
     $mail_html = '<div class="c-sec__lyt"><div class="c-tbl r-type01 r-secondary is-fixed r-type-form" style="text-align: center; font-size: 25px;">メール送信完了</div></div>';
     $mail_button = '';
 
-    $to = 'mikuni@execute.jp';
+    $to = 'jponeplus@gmail.com';
     $subject = 'お問い合わせ内容';
 
     $_POST['toiawase'] = str_replace('<br />', '',$_POST['toiawase']);
@@ -251,8 +251,8 @@ if ($_POST['type'] == 'confirm'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <!--  SEO  -->
-    <meta name="keywords" content="ワンプラス,OnePlus,トーキョー,ワンプラス東京,国際貿易,不動産,旅行業,物流倉庫,東京都足立区梅島1-32-6">
-    <meta name="description" content="ワンプラス,OnePlus,トーキョー,ワンプラス東京,国際貿易,不動産,旅行業,物流倉庫,東京都足立区梅島1-32-6">
+    <meta name="keywords" content="<?php echo $keyword ?>">
+    <meta name="description" content="<?php echo $keyword ?>">
     <title>One Plus</title>
     <!-- favicon -->
     <link rel="icon" href="/favicon.ico">
